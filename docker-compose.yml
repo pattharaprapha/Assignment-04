@@ -1,0 +1,14 @@
+name: 671540005019-8-badge
+
+services:
+  mybadge:
+    build: .
+    ports:
+      - "8083:80"
+    restart: unless-stopped
+
+  friend:
+    image: kittiphat26/ceksu-badge:1.0
+    ports:
+      - "8084:80"
+    restart: unless-stopped
